@@ -1,0 +1,29 @@
+{% extends "main.html" %}
+{% load static %}
+
+{% block page_title %}All post with tag: {{tag}}{% endblock  %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static "blog/css/post_preview.css" %}">
+<link rel="stylesheet" href="{% static "blog/css/tags.css" %}">
+{% endblock %}
+
+{% block content %}
+
+
+<section id="posts-with-tag">
+    {% if post_with_tag|length > 0 %}
+    <h2>List of all posts with tag {{tag}}:</h2>
+    <ul>
+        {% for post in post_with_tag %}
+            {% include "blog/includes/post_preview.html" %}
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h2>We're sory, but there is no posts with tag: {{tag}} :(</h2>
+    {% endif %}
+
+</section>
+
+
+{% endblock  %}
