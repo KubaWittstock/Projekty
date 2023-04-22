@@ -1,0 +1,13 @@
+{% load static %}
+<li>
+    <article class="post">
+        <a href="{% url 'post' post.slug %}">
+            <img src="{% static post.cover_img.dir %}" alt="{{post.cover_img.alt}}">
+            <div class="post__content">
+                <h4>{{post.title}}</h4>
+                <p>{{post.summary}}</p>
+                <p class="date">Created: {{post.date_created|date:"M d, Y"}}</p>
+            </div>
+        </a>
+    </article>
+</li>
