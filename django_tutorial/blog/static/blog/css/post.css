@@ -25,6 +25,8 @@ body {
     max-width: 60%;
 }
 
+
+
 #info article {
     position: absolute;
     top: 2rem;
@@ -62,11 +64,25 @@ main {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
-#tags{
+#tags>* {
+    display: inline;
+}
+
+#tags {
     margin-top: 3rem;
 }
 
-#tags .tag,
-#tags h2 {
-    display: inline;
+
+.tag a {
+    background-color: #5706c0;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin-top: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.tag a:hover {
+    background-color: #9340ff;
 }
